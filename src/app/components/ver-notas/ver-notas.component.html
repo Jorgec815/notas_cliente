@@ -1,0 +1,33 @@
+<p>Notas Finales</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Código</th>
+        <th scope="col">Materia</th>
+        <th scope="col">Primer Corte</th>
+        <th scope="col">Segundo Corte</th>
+        <th scope="col">Exámen Final</th>
+        <th scope="col">Definitiva</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiante of listaEstudiantes">
+        <td>{{estudiante.Id}}</td>
+        <td>{{estudiante.UqCodigoEstudiante}}</td>
+        <td>{{estudiante.CodigoMateria}}</td>
+        <td>{{estudiante.Nota1}}</td>
+        <td>{{estudiante.Nota2}}</td>
+        <td>{{estudiante.Nota3}}</td>
+        <td>{{estudiante.NotaDef}}</td>
+        <td>
+            <button (click)="modificarEstudiante(estudiante.Id)" type="button" class="btn btn-primary">Editar</button>
+        </td>
+        <td>
+            <button (click)="eliminar(estudiante.Id)" type="button" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+  </table>

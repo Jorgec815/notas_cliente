@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Agregar Estudiante</h1>
+
+    <form>
+        <div class="mb-3">
+          <label class="form-label">Código Estudiante</label>
+          <input [(ngModel)]="estudiante.UqCodigoEstudiante"type="number" class="form-control" name="codEstudiante" min="0">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Código Materia</label>
+            <input [(ngModel)]="estudiante.CodigoMateria" type="number" class="form-control" name="codMateria" min="0">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nota Primer Corte</label>
+            <input [(ngModel)]="estudiante.Nota1" type="number" class="form-control" name="nota1" min="0" max="5" step="any">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nota Segundo Corte</label>
+            <input [(ngModel)]="estudiante.Nota2" type="number" class="form-control" name="nota2" min="0" max="5" step="any">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nota Examen Final</label>
+            <input [(ngModel)]="estudiante.Nota3" type="number" class="form-control" name="nota3" min="0" max="5" step="any">
+        </div>
+        
+        <button (click)="agregar()" type="submit" class="btn btn-primary">Registrar</button>
+      </form>
+
+</div>
